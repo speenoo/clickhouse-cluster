@@ -8,10 +8,6 @@
             <host from_env="KEEPER_02_HOST"></host>
             <port>2181</port>
         </node>
-        <node index="3">
-            <host from_env="KEEPER_03_HOST"></host>
-            <port>2181</port>
-        </node>
     </zookeeper>
 
     <distributed_ddl>

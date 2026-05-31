@@ -32,11 +32,6 @@
                 <hostname from_env="KEEPER_02_HOST"></hostname>
                 <port>9234</port>
             </server>
-            <server>
-                <id>3</id>
-                <hostname from_env="KEEPER_03_HOST"></hostname>
-                <port>9234</port>
-            </server>
         </raft_configuration>
     </keeper_server>
 </clickhouse>

@@ -2,7 +2,14 @@
 
 # Wait for ClickHouse to be ready
 
-CLICKHOUSE_HOSTS=($CLICKHOUSE_01_01_HOST $CLICKHOUSE_02_01_HOST $CLICKHOUSE_03_01_HOST)
+CLICKHOUSE_HOSTS=("$CLICKHOUSE_01_01_HOST" "$CLICKHOUSE_01_02_HOST")
+
+for host in "${CLICKHOUSE_HOSTS[@]}"; do
+    if [ -z "$host" ]; then
+        echo "Missing required ClickHouse host env var"
+        exit 1
+    fi
+done
 
 echo "Waiting for All ClickHouse Instances to be ready..."
 

@@ -3,7 +3,7 @@
         <local_cluster>
             <shard>
                 <weight>1</weight>
-                <internal_replication>false</internal_replication>
+                <internal_replication>true</internal_replication>
                 <replica>
                     <host from_env="CLICKHOUSE_01_01_HOST"></host>
                     <port>9000</port>
@@ -12,38 +12,6 @@
                 </replica>
                 <replica>
                     <host from_env="CLICKHOUSE_01_02_HOST"></host>
-                    <port>9000</port>
-                    <user from_env="CH_USER"></user>
-                    <password from_env="CH_PASSWORD"></password>
-                </replica>
-            </shard>
-            <shard>
-                <weight>1</weight>
-                <internal_replication>false</internal_replication>
-                <replica>
-                    <host from_env="CLICKHOUSE_02_01_HOST"></host>
-                    <port>9000</port>
-                    <user from_env="CH_USER"></user>
-                    <password from_env="CH_PASSWORD"></password>
-                </replica>
-                <replica>
-                    <host from_env="CLICKHOUSE_02_02_HOST"></host>
-                    <port>9000</port>
-                    <user from_env="CH_USER"></user>
-                    <password from_env="CH_PASSWORD"></password>
-                </replica>
-            </shard>
-            <shard>
-                <weight>1</weight>
-                <internal_replication>false</internal_replication>
-                <replica>
-                    <host from_env="CLICKHOUSE_03_01_HOST"></host>
-                    <port>9000</port>
-                    <user from_env="CH_USER"></user>
-                    <password from_env="CH_PASSWORD"></password>
-                </replica>
-                <replica>
-                    <host from_env="CLICKHOUSE_03_02_HOST"></host>
                     <port>9000</port>
                     <user from_env="CH_USER"></user>
                     <password from_env="CH_PASSWORD"></password>
